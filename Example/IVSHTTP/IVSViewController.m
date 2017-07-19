@@ -114,7 +114,15 @@
                      } failure:^(NSError *error) {
                          NSLog(@"%@", error.description);
                      }];
-     */
+     
+    
+    
+    
+   NSData *data = [IVSHTTP syncUpload:@"https://api.MYDOMAIN.com/upload"
+                         inputTagName:@"uploadFile"
+                           parameters:parameters
+                            dataArray:dataDic];
+    */
 }
 
 

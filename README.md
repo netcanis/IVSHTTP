@@ -100,6 +100,15 @@ NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] init];
 ```
 
 
+### syncUpload
+```objc
+NSData *data = [IVSHTTP syncUpload:@"https://api.MYDOMAIN.com/upload"
+                      inputTagName:@"uploadFile"
+                        parameters:parameters
+                         dataArray:dataDic];
+```
+
+
 
 ## Requirements
 - Base SDK: iOS 10
