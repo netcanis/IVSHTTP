@@ -40,7 +40,7 @@ NSData *data = [IVSHTTP syncSend:@"GET"
 ```
 
 
-### asyncSend
+### asyncDownload
 ```objc
 [IVSHTTP asyncDownload:@"https://www.gstatic.com/webp/gallery3/1.sm.png"
                success:^(NSData *data, NSDictionary* info) {
@@ -55,7 +55,7 @@ NSData *data = [IVSHTTP syncSend:@"GET"
 ```
 
 
-### asyncSend
+### syncDownload
 ```objc
 NSDictionary *info = nil;
 NSData *data = [IVSHTTP syncDownload:@"https://www.gstatic.com/webp/gallery3/1.sm.png" info:&info];
@@ -64,7 +64,7 @@ NSString *filePath = [info objectForKey:@"filePath"];
 ```
 
 
-### asyncSend
+### asyncUpload
 ```objc
 NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:
                                 @"IVSHTTP", @"appId",
