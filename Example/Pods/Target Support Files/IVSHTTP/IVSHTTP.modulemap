@@ -1,0 +1,6 @@
+framework module IVSHTTP {
+  umbrella header "IVSHTTP-umbrella.h"
+
+  export *
+  module * { export * }
+}

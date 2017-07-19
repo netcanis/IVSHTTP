@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08618D1CD6952F9150A42FA9D080F614 /* Pods-IVSHTTP_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C24E9FE76F26CA37E133A07202F64589 /* Pods-IVSHTTP_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F890C1D02EA5B4D72548CE98843E037 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		2101C1A41586E5DA746FC8A85C794C17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		4815367C1F1EEDF200FD24A0 /* IVSHTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 481536791F1EEDF200FD24A0 /* IVSHTTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4815367D1F1EEDF200FD24A0 /* IVSHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4815367A1F1EEDF200FD24A0 /* IVSHTTP.m */; };
+		4815367E1F1EEFD900FD24A0 /* IVSHTTP.m in Headers */ = {isa = PBXBuildFile; fileRef = 4815367A1F1EEDF200FD24A0 /* IVSHTTP.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		487B404E1F1F371B00F87C56 /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 487B404C1F1F371B00F87C56 /* KeychainItemWrapper.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		487B404F1F1F371B00F87C56 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 487B404D1F1F371B00F87C56 /* KeychainItemWrapper.m */; };
+		4D9DD947C2D596EE8E4BE22C486F2750 /* Pods-IVSHTTP_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B741B079412DC5BA425FFE58DB982C78 /* Pods-IVSHTTP_Example-dummy.m */; };
+		67E0836F33C00F5AB55D0C2CE6862C04 /* Pods-IVSHTTP_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A04B2ACFC9AD31B03EAF89CBBC4DC1 /* Pods-IVSHTTP_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADCED32C63167313240C4771B53BE277 /* IVSHTTP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD06ABABC77BFB268C851F0BA1CAEF34 /* IVSHTTP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEFD04ACB67B83A56D08A37B07E87103 /* IVSHTTP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E44B98E50AB8C40C6FD6730648B16D /* IVSHTTP-dummy.m */; };
+		EAD0D0EB9870C823DC1B08AF4B2F86C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		F653562DDC1E42D78CDF86C04F2C8F20 /* Pods-IVSHTTP_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D95567421E28460273E48927ADA81B0 /* Pods-IVSHTTP_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F97414396227C13AB8B2890807C723B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8546860EF6F32CBA8E847A33E05E37F4;
+			remoteInfo = IVSHTTP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07A04B2ACFC9AD31B03EAF89CBBC4DC1 /* Pods-IVSHTTP_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IVSHTTP_Tests-umbrella.h"; sourceTree = "<group>"; };
+		20829C50F674FCD1B63C93ABA29A2015 /* Pods_IVSHTTP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IVSHTTP_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A3230AD236B51DF1D47F3802686B21B /* Pods_IVSHTTP_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IVSHTTP_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FCFB3523CBD17D6CB281EBA158E4079 /* Pods-IVSHTTP_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IVSHTTP_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		31E7073C97CAB03A1539140DFA4A1EB3 /* IVSHTTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IVSHTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		372A48238AB7F2DBD0799C7B22C86920 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		481536781F1EEDF200FD24A0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		481536791F1EEDF200FD24A0 /* IVSHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVSHTTP.h; sourceTree = "<group>"; };
+		4815367A1F1EEDF200FD24A0 /* IVSHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVSHTTP.m; sourceTree = "<group>"; };
+		487B404C1F1F371B00F87C56 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		487B404D1F1F371B00F87C56 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		48BC4571522C7B867AD3B39AB2241642 /* Pods-IVSHTTP_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IVSHTTP_Tests.modulemap"; sourceTree = "<group>"; };
+		4D95567421E28460273E48927ADA81B0 /* Pods-IVSHTTP_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IVSHTTP_Tests-dummy.m"; sourceTree = "<group>"; };
+		571DA491AC59095544E973A403E151FF /* Pods-IVSHTTP_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IVSHTTP_Tests-resources.sh"; sourceTree = "<group>"; };
+		713BCA55E4545F84C25088F35BB1C071 /* IVSHTTP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IVSHTTP-prefix.pch"; sourceTree = "<group>"; };
+		7462CF69F80F9473EEE6B95567D7F2D0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		759451766513FB9BA881C81ECDED00FC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BE65A1A277D7059E126E36BBE8776E9 /* Pods-IVSHTTP_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IVSHTTP_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9CA7D7DC6C7532B528EA377398EDFB9A /* Pods-IVSHTTP_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IVSHTTP_Example-frameworks.sh"; sourceTree = "<group>"; };
+		A3B97F254B52FF481DB138CFE5326B6C /* Pods-IVSHTTP_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IVSHTTP_Example.modulemap"; sourceTree = "<group>"; };
+		AE684220C30DD039382F80DCA1015912 /* IVSHTTP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IVSHTTP.xcconfig; sourceTree = "<group>"; };
+		B741B079412DC5BA425FFE58DB982C78 /* Pods-IVSHTTP_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IVSHTTP_Example-dummy.m"; sourceTree = "<group>"; };
+		BDB689A5F38C6098F82FDF80F6CED222 /* Pods-IVSHTTP_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IVSHTTP_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		C02DD43C365BE803E620968045CB5CFC /* Pods-IVSHTTP_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IVSHTTP_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C1A488EEA0F752ED1EE4CC5A828FF277 /* Pods-IVSHTTP_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IVSHTTP_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C24E9FE76F26CA37E133A07202F64589 /* Pods-IVSHTTP_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IVSHTTP_Example-umbrella.h"; sourceTree = "<group>"; };
+		C5371B5382AF7DC9CBE3D65E14E4B880 /* Pods-IVSHTTP_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IVSHTTP_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CD06ABABC77BFB268C851F0BA1CAEF34 /* IVSHTTP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IVSHTTP-umbrella.h"; sourceTree = "<group>"; };
+		D1753F1C4DFD847FB95DAE8F1D31878E /* Pods-IVSHTTP_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IVSHTTP_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D2D0618DE32F7765EB30BC689767042F /* IVSHTTP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = IVSHTTP.modulemap; sourceTree = "<group>"; };
+		D6FA978E34BB090468164F699CE127AE /* Pods-IVSHTTP_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IVSHTTP_Example-resources.sh"; sourceTree = "<group>"; };
+		E7E44B98E50AB8C40C6FD6730648B16D /* IVSHTTP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IVSHTTP-dummy.m"; sourceTree = "<group>"; };
+		FD4DA155FA46010FB9950D48BC37C020 /* Pods-IVSHTTP_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IVSHTTP_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		FF4F57A83A0227433D48C17E7E6AF0FE /* Pods-IVSHTTP_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IVSHTTP_Tests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DA4CC64866689C7DA6BFEE2EEBBDCEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F890C1D02EA5B4D72548CE98843E037 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D922FC82E8CC1CE52D6CFE197649DA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2101C1A41586E5DA746FC8A85C794C17 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3E99DF0C6F69CB3820429B40CE97612 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAD0D0EB9870C823DC1B08AF4B2F86C2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C5D5A00A57508B02E038C3B8DBA1991 /* IVSHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				481536761F1EEDF200FD24A0 /* IVSHTTP */,
+				FFE06284DD5B4E9B4372ABF183DE552F /* Support Files */,
+			);
+			name = IVSHTTP;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		481536761F1EEDF200FD24A0 /* IVSHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				4815367B1F1EEDF200FD24A0 /* Private */,
+				481536771F1EEDF200FD24A0 /* Assets */,
+				481536791F1EEDF200FD24A0 /* IVSHTTP.h */,
+				4815367A1F1EEDF200FD24A0 /* IVSHTTP.m */,
+			);
+			path = IVSHTTP;
+			sourceTree = "<group>";
+		};
+		481536771F1EEDF200FD24A0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				481536781F1EEDF200FD24A0 /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		4815367B1F1EEDF200FD24A0 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				487B404C1F1F371B00F87C56 /* KeychainItemWrapper.h */,
+				487B404D1F1F371B00F87C56 /* KeychainItemWrapper.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		5422A3D82A62E78E0DFBC57CE6023829 /* Pods-IVSHTTP_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				759451766513FB9BA881C81ECDED00FC /* Info.plist */,
+				48BC4571522C7B867AD3B39AB2241642 /* Pods-IVSHTTP_Tests.modulemap */,
+				C5371B5382AF7DC9CBE3D65E14E4B880 /* Pods-IVSHTTP_Tests-acknowledgements.markdown */,
+				2FCFB3523CBD17D6CB281EBA158E4079 /* Pods-IVSHTTP_Tests-acknowledgements.plist */,
+				4D95567421E28460273E48927ADA81B0 /* Pods-IVSHTTP_Tests-dummy.m */,
+				BDB689A5F38C6098F82FDF80F6CED222 /* Pods-IVSHTTP_Tests-frameworks.sh */,
+				571DA491AC59095544E973A403E151FF /* Pods-IVSHTTP_Tests-resources.sh */,
+				07A04B2ACFC9AD31B03EAF89CBBC4DC1 /* Pods-IVSHTTP_Tests-umbrella.h */,
+				C1A488EEA0F752ED1EE4CC5A828FF277 /* Pods-IVSHTTP_Tests.debug.xcconfig */,
+				FF4F57A83A0227433D48C17E7E6AF0FE /* Pods-IVSHTTP_Tests.release.xcconfig */,
+			);
+			name = "Pods-IVSHTTP_Tests";
+			path = "Target Support Files/Pods-IVSHTTP_Tests";
+			sourceTree = "<group>";
+		};
+		627390E106DC67B19042AA0C095B5421 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31E7073C97CAB03A1539140DFA4A1EB3 /* IVSHTTP.framework */,
+				20829C50F674FCD1B63C93ABA29A2015 /* Pods_IVSHTTP_Example.framework */,
+				2A3230AD236B51DF1D47F3802686B21B /* Pods_IVSHTTP_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AC4F62F31B77A8A7301F42F0B8447A9 /* Pods-IVSHTTP_Example */ = {
+			isa = PBXGroup;
+			children = (
+				372A48238AB7F2DBD0799C7B22C86920 /* Info.plist */,
+				A3B97F254B52FF481DB138CFE5326B6C /* Pods-IVSHTTP_Example.modulemap */,
+				8BE65A1A277D7059E126E36BBE8776E9 /* Pods-IVSHTTP_Example-acknowledgements.markdown */,
+				FD4DA155FA46010FB9950D48BC37C020 /* Pods-IVSHTTP_Example-acknowledgements.plist */,
+				B741B079412DC5BA425FFE58DB982C78 /* Pods-IVSHTTP_Example-dummy.m */,
+				9CA7D7DC6C7532B528EA377398EDFB9A /* Pods-IVSHTTP_Example-frameworks.sh */,
+				D6FA978E34BB090468164F699CE127AE /* Pods-IVSHTTP_Example-resources.sh */,
+				C24E9FE76F26CA37E133A07202F64589 /* Pods-IVSHTTP_Example-umbrella.h */,
+				D1753F1C4DFD847FB95DAE8F1D31878E /* Pods-IVSHTTP_Example.debug.xcconfig */,
+				C02DD43C365BE803E620968045CB5CFC /* Pods-IVSHTTP_Example.release.xcconfig */,
+			);
+			name = "Pods-IVSHTTP_Example";
+			path = "Target Support Files/Pods-IVSHTTP_Example";
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				FA0FB7CDDD352F755013A943FCBC5576 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				627390E106DC67B19042AA0C095B5421 /* Products */,
+				FF0D2936D083C79D2E867428525A0DC4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA0FB7CDDD352F755013A943FCBC5576 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C5D5A00A57508B02E038C3B8DBA1991 /* IVSHTTP */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FF0D2936D083C79D2E867428525A0DC4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AC4F62F31B77A8A7301F42F0B8447A9 /* Pods-IVSHTTP_Example */,
+				5422A3D82A62E78E0DFBC57CE6023829 /* Pods-IVSHTTP_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FFE06284DD5B4E9B4372ABF183DE552F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7462CF69F80F9473EEE6B95567D7F2D0 /* Info.plist */,
+				D2D0618DE32F7765EB30BC689767042F /* IVSHTTP.modulemap */,
+				AE684220C30DD039382F80DCA1015912 /* IVSHTTP.xcconfig */,
+				E7E44B98E50AB8C40C6FD6730648B16D /* IVSHTTP-dummy.m */,
+				713BCA55E4545F84C25088F35BB1C071 /* IVSHTTP-prefix.pch */,
+				CD06ABABC77BFB268C851F0BA1CAEF34 /* IVSHTTP-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/IVSHTTP";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0ECDBB3003DE9AB8D6866392C819D97A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67E0836F33C00F5AB55D0C2CE6862C04 /* Pods-IVSHTTP_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B94D8B99CF30BFAC3B11310762AFBD5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4815367E1F1EEFD900FD24A0 /* IVSHTTP.m in Headers */,
+				4815367C1F1EEDF200FD24A0 /* IVSHTTP.h in Headers */,
+				ADCED32C63167313240C4771B53BE277 /* IVSHTTP-umbrella.h in Headers */,
+				487B404E1F1F371B00F87C56 /* KeychainItemWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2E274D13BD9FAC8DEA68C3A017FB3C1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08618D1CD6952F9150A42FA9D080F614 /* Pods-IVSHTTP_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2421A1AE692A5209F66C3AE74188835C /* Pods-IVSHTTP_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D351BD0CB10B93625A9FA0D4ED8AC606 /* Build configuration list for PBXNativeTarget "Pods-IVSHTTP_Example" */;
+			buildPhases = (
+				962F5F47AB525A56D3A11CEEB6BF538C /* Sources */,
+				A3E99DF0C6F69CB3820429B40CE97612 /* Frameworks */,
+				C2E274D13BD9FAC8DEA68C3A017FB3C1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0600A9D7471FDEF41CB7B9FF74278271 /* PBXTargetDependency */,
+			);
+			name = "Pods-IVSHTTP_Example";
+			productName = "Pods-IVSHTTP_Example";
+			productReference = 20829C50F674FCD1B63C93ABA29A2015 /* Pods_IVSHTTP_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8546860EF6F32CBA8E847A33E05E37F4 /* IVSHTTP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E9EE1F8AAAB91206B95123B251F0D1B /* Build configuration list for PBXNativeTarget "IVSHTTP" */;
+			buildPhases = (
+				BAB41F785D5E079E6523D2F77DCE1253 /* Sources */,
+				6D922FC82E8CC1CE52D6CFE197649DA2 /* Frameworks */,
+				7B94D8B99CF30BFAC3B11310762AFBD5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IVSHTTP;
+			productName = IVSHTTP;
+			productReference = 31E7073C97CAB03A1539140DFA4A1EB3 /* IVSHTTP.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B98C37D0D95EA2466AD18B489EA9E9A1 /* Pods-IVSHTTP_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5301173F3697EC4377ACE843CFE77B74 /* Build configuration list for PBXNativeTarget "Pods-IVSHTTP_Tests" */;
+			buildPhases = (
+				C1D977782B29919BFBB98AF0ACA42093 /* Sources */,
+				2DA4CC64866689C7DA6BFEE2EEBBDCEB /* Frameworks */,
+				0ECDBB3003DE9AB8D6866392C819D97A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-IVSHTTP_Tests";
+			productName = "Pods-IVSHTTP_Tests";
+			productReference = 2A3230AD236B51DF1D47F3802686B21B /* Pods_IVSHTTP_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 627390E106DC67B19042AA0C095B5421 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8546860EF6F32CBA8E847A33E05E37F4 /* IVSHTTP */,
+				2421A1AE692A5209F66C3AE74188835C /* Pods-IVSHTTP_Example */,
+				B98C37D0D95EA2466AD18B489EA9E9A1 /* Pods-IVSHTTP_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		962F5F47AB525A56D3A11CEEB6BF538C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9DD947C2D596EE8E4BE22C486F2750 /* Pods-IVSHTTP_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB41F785D5E079E6523D2F77DCE1253 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4815367D1F1EEDF200FD24A0 /* IVSHTTP.m in Sources */,
+				BEFD04ACB67B83A56D08A37B07E87103 /* IVSHTTP-dummy.m in Sources */,
+				487B404F1F1F371B00F87C56 /* KeychainItemWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1D977782B29919BFBB98AF0ACA42093 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F653562DDC1E42D78CDF86C04F2C8F20 /* Pods-IVSHTTP_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0600A9D7471FDEF41CB7B9FF74278271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IVSHTTP;
+			target = 8546860EF6F32CBA8E847A33E05E37F4 /* IVSHTTP */;
+			targetProxy = 2F97414396227C13AB8B2890807C723B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5AF448BE2D6ECAE75421744EB53334CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF4F57A83A0227433D48C17E7E6AF0FE /* Pods-IVSHTTP_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-IVSHTTP_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-IVSHTTP_Tests/Pods-IVSHTTP_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_IVSHTTP_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6222B53C877A57635FE4226F4860B67A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE684220C30DD039382F80DCA1015912 /* IVSHTTP.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IVSHTTP/IVSHTTP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IVSHTTP/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IVSHTTP/IVSHTTP.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = IVSHTTP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6945321345DDE8F8E4ACE886E157EB03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1A488EEA0F752ED1EE4CC5A828FF277 /* Pods-IVSHTTP_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-IVSHTTP_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-IVSHTTP_Tests/Pods-IVSHTTP_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_IVSHTTP_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		79AA8303063018C9FA603F582A91D887 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE684220C30DD039382F80DCA1015912 /* IVSHTTP.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IVSHTTP/IVSHTTP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IVSHTTP/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IVSHTTP/IVSHTTP.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = IVSHTTP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CC7133605450E496B58BE301DD63D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1753F1C4DFD847FB95DAE8F1D31878E /* Pods-IVSHTTP_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-IVSHTTP_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-IVSHTTP_Example/Pods-IVSHTTP_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_IVSHTTP_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D83512D5743779AC26BEA51A9B840642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C02DD43C365BE803E620968045CB5CFC /* Pods-IVSHTTP_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-IVSHTTP_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-IVSHTTP_Example/Pods-IVSHTTP_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_IVSHTTP_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E9EE1F8AAAB91206B95123B251F0D1B /* Build configuration list for PBXNativeTarget "IVSHTTP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6222B53C877A57635FE4226F4860B67A /* Debug */,
+				79AA8303063018C9FA603F582A91D887 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
+				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5301173F3697EC4377ACE843CFE77B74 /* Build configuration list for PBXNativeTarget "Pods-IVSHTTP_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6945321345DDE8F8E4ACE886E157EB03 /* Debug */,
+				5AF448BE2D6ECAE75421744EB53334CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D351BD0CB10B93625A9FA0D4ED8AC606 /* Build configuration list for PBXNativeTarget "Pods-IVSHTTP_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CC7133605450E496B58BE301DD63D10 /* Debug */,
+				D83512D5743779AC26BEA51A9B840642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

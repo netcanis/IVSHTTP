@@ -1,0 +1,22 @@
+{
+  "name": "IVSHTTP",
+  "version": "0.1.0",
+  "summary": "A short description of IVSHTTP.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/netcanis/IVSHTTP",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "netcanis": "netcanis@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/netcanis/IVSHTTP.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "IVSHTTP/Classes/**/*"
+}

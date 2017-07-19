@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'IVSHTTP_Example' do
+  pod 'IVSHTTP', :path => '../'
+
+  target 'IVSHTTP_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
