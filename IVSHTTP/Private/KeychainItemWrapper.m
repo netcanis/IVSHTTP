@@ -303,13 +303,18 @@ Keychain API expects as a validly constructed container class.
 		NSData * xmlData = (__bridge_transfer NSData *) cfXmlData;
 		[returnDict removeObjectForKey:(__bridge id)kSecReturnData];
 		
-		NSString * errorDesc = nil;
+//		NSString * errorDesc = nil;
 		NSPropertyListFormat fmt;
-		NSDictionary * resultsInfo = (NSDictionary *) [NSPropertyListSerialization propertyListFromData:xmlData
-                                                                                       mutabilityOption:NSPropertyListMutableContainersAndLeaves
+//		NSDictionary * resultsInfo = (NSDictionary *) [NSPropertyListSerialization propertyListFromData:xmlData
+//                                                                                       mutabilityOption:NSPropertyListMutableContainersAndLeaves
+//                                                                                                 format:&fmt
+//                                                                                       errorDescription: &errorDesc];
+
+        NSError *error;
+        NSDictionary * resultsInfo = (NSDictionary *) [NSPropertyListSerialization propertyListWithData:xmlData
+                                                                                                options:NSPropertyListMutableContainersAndLeaves
                                                                                                  format:&fmt
-                                                                                       errorDescription: &errorDesc];
-		
+                                                                                                  error:&error];
         if (resultsInfo)
             [returnDict setObject:resultsInfo forKey:(__bridge id)kSecValueData];
 		
