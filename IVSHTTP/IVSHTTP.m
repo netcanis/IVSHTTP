@@ -451,7 +451,7 @@
 + (void)saveImagesToAlbum:(NSMutableArray *)images
 {
     for (UIImage *image in images) {
-        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void*)image);
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);//(__bridge void*)imgUrl
     }
 }
 
@@ -460,10 +460,8 @@
     if (nil == image) {
         return;
     }
-    
-    NSString *imgUrl = (__bridge NSString *)(contextInfo);
+    //NSString *imgUrl = (__bridge NSString *)(contextInfo);
     if (nil != error) {
-        NSLog(@"failed download %@", imgUrl);
         UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), contextInfo);
     }
 }
