@@ -51,7 +51,7 @@
     
     
     NSData *data = [IVSHTTP syncSend:@"GET"
-                                 url:@"https://app.dcgworld.com/api/version"
+                                 url:@"https://script.googleusercontent.com/macros/echo"
                           parameters:parameters];
     NSLog(@"\n--------------------------------\nsyncSend\n%@\n", [IVSHTTP data2Json:data]);
 }
