@@ -52,6 +52,7 @@
 + (float)iosVersion;
 + (NSString *)appVersion;
 + (NSString *)appBuildCount;
++ (NSString*)appUniqueId;
 + (NSString *)docDir;
 + (NSString *)docPath:(NSString *)fileName;
 + (NSString *)generateBoundaryString;

@@ -256,6 +256,26 @@
     return (NSString *)[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 }
 
+// Generate unique id of device for iPhone / iPad using Objective-c
++ (NSString*)appUniqueId
+{
+    // initialize keychaing item for saving UUID.
+    KeychainItemWrapper *wrapper = [[KeychainItemWrapper alloc] initWithIdentifier:[IVSHTTP bundleId]
+                                                                       accessGroup:nil];
+    NSString *uuid = [wrapper objectForKey:(__bridge id)(kSecAttrAccount)];
+    if( uuid == nil || uuid.length == 0){
+        // if there is not UUID in keychain, make UUID and save it.
+        CFUUIDRef uuidRef = CFUUIDCreate(NULL);
+        CFStringRef uuidStringRef = CFUUIDCreateString(NULL, uuidRef);
+        CFRelease(uuidRef);
+        uuid = [NSString stringWithString:(__bridge NSString *)uuidStringRef];
+        CFRelease(uuidStringRef);
+        // save UUID in keychain
+        [wrapper setObject:uuid forKey:(__bridge id)(kSecAttrAccount)];
+    }
+    return uuid;
+}
+
 + (NSString *)docDir
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -451,7 +471,7 @@
 + (void)saveImagesToAlbum:(NSMutableArray *)images
 {
     for (UIImage *image in images) {
-        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void*)image);
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);//(__bridge void*)imgUrl
     }
 }
 
@@ -460,10 +480,8 @@
     if (nil == image) {
         return;
     }
-    
-    NSString *imgUrl = (__bridge NSString *)(contextInfo);
+    //NSString *imgUrl = (__bridge NSString *)(contextInfo);
     if (nil != error) {
-        NSLog(@"failed download %@", imgUrl);
         UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), contextInfo);
     }
 }
