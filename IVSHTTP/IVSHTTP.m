@@ -222,6 +222,7 @@
 }
 
 
+
 #pragma mark -
 #pragma mark - Util
 
@@ -262,37 +263,24 @@
     }
     return dict;
 }
-//
-//+ (id)data2Cont:(NSData *)data
-//{
-//    return [NSJSONSerialization JSONObjectWithData:data
-//                                           options:NSJSONReadingMutableContainers
-//                                             error:nil];
-//}
-//
-//+ (NSData *)cont2Data:(id)container
-//{
-//    return [NSJSONSerialization dataWithJSONObject:container
-//                                           options:0
-//                                             error:nil];
-//}
-//
-//+ (NSString *)data2Json:(NSData *)data
-//{
-//    return [[NSString alloc] initWithData:data
-//                                 encoding:NSUTF8StringEncoding];
-//}
-//
-//+ (NSData *)json2Data:(NSString *)json
-//{
-//    return [json dataUsingEncoding:NSUTF8StringEncoding];
-//}
+
++ (NSString *)docPath:(NSString *)fileName
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    return [docDir stringByAppendingPathComponent:fileName];
+}
+
++ (id)data2Cont:(NSData *)data
+{
+    return [NSJSONSerialization JSONObjectWithData:data
+                                           options:NSJSONReadingMutableContainers
+                                             error:nil];
+}
 
 + (void)removeWebChche
 {
-    //
     // WKWebView
-    //
     NSSet *websiteDataTypes = [NSSet setWithArray:@[
                                                     WKWebsiteDataTypeDiskCache,
                                                     //WKWebsiteDataTypeOfflineWebApplicationCache,
@@ -314,48 +302,23 @@
     }];
     
     
-    //
     // UIWebView
-    //
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
-+ (NSString *)cutPath:(NSString *)urlString
++ (NSURL *)utf8URL:(NSString *)urlString
 {
-    NSRange range = [urlString rangeOfString:@"/" options:NSBackwardsSearch];
-    if (NSNotFound != range.location) {
-        return [urlString substringToIndex:range.location];
-    }
-    return urlString;
+    NSCharacterSet *allowedCharacterSet = [NSCharacterSet URLQueryAllowedCharacterSet];
+    NSURL *URL = [NSURL URLWithString:[urlString stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacterSet]];
+    return URL;
 }
 
-+ (NSString *)cutFilename:(NSString *)urlString
++ (NSString *)utf8toNString:(NSString *)utf8String
 {
-    return [[urlString lastPathComponent] stringByDeletingPathExtension];
-}
-
-+ (NSString *)cutFileExt:(NSString *)urlString
-{
-    return [[urlString lastPathComponent] pathExtension];
-}
-
-+ (NSString *)contentTypeForImageData:(NSData *)data
-{
-    uint8_t c;
-    [data getBytes:&c length:1];
-    
-    switch (c) {
-        case 0xFF:
-            return @"image/jpeg";
-        case 0x89:
-            return @"image/png";
-        case 0x47:
-            return @"image/gif";
-        case 0x49:
-        case 0x4D:
-            return @"image/tiff";
-    }
-    return nil;
+    NSString* strT= [utf8String stringByReplacingOccurrencesOfString:@"\\U" withString:@"\\u"];
+    CFStringRef transform = CFSTR("Any-Hex/Java");
+    CFStringTransform((__bridge CFMutableStringRef)strT, NULL, transform, YES);
+    return strT;
 }
 
 + (BOOL)checkingURLExists:(NSString *)url
@@ -388,74 +351,6 @@
     return result;
 }
 
-+ (void)shareData:(id)vc title:(NSString *)strTitle param:(NSMutableArray *)items
-{
-    @try {
-        if (nil == vc) {
-            vc = [[UIApplication sharedApplication] delegate].window.rootViewController;
-        }
-        
-        [items insertObject:strTitle atIndex:0];
-        
-        UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
-        [vc presentViewController:activityViewController animated:YES completion:nil];
-    } @catch (NSException *e) {
-        NSLog(@"exceptionName %@, reason %@", [e name], [e reason]);
-    } @finally {
-        NSLog(@"shareAction");
-    }
-}
-
-+ (void)saveImagesToAlbum:(NSMutableArray *)images
-{
-    for (UIImage *image in images) {
-        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);//(__bridge void*)imgUrl
-    }
-}
-
-+ (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
-{
-    if (nil == image) {
-        return;
-    }
-    //NSString *imgUrl = (__bridge NSString *)(contextInfo);
-    if (nil != error) {
-        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), contextInfo);
-    }
-}
-
-+ (BOOL)externalAppRequiredToOpenURL:(NSURL *)URL
-{
-    NSSet *validSchemes = [NSSet setWithArray:@[@"http", @"https"]];
-    return ![validSchemes containsObject:URL.scheme];
-}
-
-
-+ (void)writeToFile:(NSString *)fullPath with:(NSData *)data
-{
-    NSString *path = [IVSHTTP cutPath:fullPath];
-    if (NO == [[NSFileManager defaultManager] fileExistsAtPath:path]) {
-        NSError *error = nil;
-        NSDictionary *attr = [NSDictionary dictionaryWithObject:NSFileProtectionComplete
-                                                         forKey:NSFileProtectionKey];
-        [[NSFileManager defaultManager] createDirectoryAtPath:path
-                                  withIntermediateDirectories:YES
-                                                   attributes:attr
-                                                        error:&error];
-        if (error) {
-            NSLog(@"Error creating directory path: %@", [error localizedDescription]);
-            return;
-        }
-    }
-    
-    [data writeToFile:fullPath atomically:NO];
-}
-
-+ (NSData *)readFromFile:(NSString *)path
-{
-    return [NSData dataWithContentsOfFile:path];
-}
-
 + (NSString *)urlEncode:(NSString *)str
 {
     return [str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
@@ -466,12 +361,6 @@
     return [str stringByRemovingPercentEncoding];
 }
 
-+ (NSString *)utf8toNString:(NSString *)str
-{
-    NSString* strT= [str stringByReplacingOccurrencesOfString:@"\\U" withString:@"\\u"];
-    CFStringRef transform = CFSTR("Any-Hex/Java");
-    CFStringTransform((__bridge CFMutableStringRef)strT, NULL, transform, YES);
-    return strT;
-}
+
 
 @end

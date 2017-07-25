@@ -47,6 +47,5 @@ Pod::Spec.new do |s|
 
   #s.library = 'c++'
   s.frameworks    = 'Foundation', 'UIKit', 'QuartzCore'
-  s.dependency 'IVSUtil'
 
 end
