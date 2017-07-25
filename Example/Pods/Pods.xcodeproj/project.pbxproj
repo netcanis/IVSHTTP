@@ -13,8 +13,6 @@
 		4815367C1F1EEDF200FD24A0 /* IVSHTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 481536791F1EEDF200FD24A0 /* IVSHTTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4815367D1F1EEDF200FD24A0 /* IVSHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4815367A1F1EEDF200FD24A0 /* IVSHTTP.m */; };
 		4815367E1F1EEFD900FD24A0 /* IVSHTTP.m in Headers */ = {isa = PBXBuildFile; fileRef = 4815367A1F1EEDF200FD24A0 /* IVSHTTP.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		487B404E1F1F371B00F87C56 /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 487B404C1F1F371B00F87C56 /* KeychainItemWrapper.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		487B404F1F1F371B00F87C56 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 487B404D1F1F371B00F87C56 /* KeychainItemWrapper.m */; };
 		4D9DD947C2D596EE8E4BE22C486F2750 /* Pods-IVSHTTP_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B741B079412DC5BA425FFE58DB982C78 /* Pods-IVSHTTP_Example-dummy.m */; };
 		67E0836F33C00F5AB55D0C2CE6862C04 /* Pods-IVSHTTP_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A04B2ACFC9AD31B03EAF89CBBC4DC1 /* Pods-IVSHTTP_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADCED32C63167313240C4771B53BE277 /* IVSHTTP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD06ABABC77BFB268C851F0BA1CAEF34 /* IVSHTTP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,8 +41,6 @@
 		481536781F1EEDF200FD24A0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		481536791F1EEDF200FD24A0 /* IVSHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVSHTTP.h; sourceTree = "<group>"; };
 		4815367A1F1EEDF200FD24A0 /* IVSHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVSHTTP.m; sourceTree = "<group>"; };
-		487B404C1F1F371B00F87C56 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
-		487B404D1F1F371B00F87C56 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		48BC4571522C7B867AD3B39AB2241642 /* Pods-IVSHTTP_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-IVSHTTP_Tests.modulemap"; sourceTree = "<group>"; };
 		4D95567421E28460273E48927ADA81B0 /* Pods-IVSHTTP_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IVSHTTP_Tests-dummy.m"; sourceTree = "<group>"; };
 		571DA491AC59095544E973A403E151FF /* Pods-IVSHTTP_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IVSHTTP_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -132,8 +128,6 @@
 		4815367B1F1EEDF200FD24A0 /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				487B404C1F1F371B00F87C56 /* KeychainItemWrapper.h */,
-				487B404D1F1F371B00F87C56 /* KeychainItemWrapper.m */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -260,7 +254,6 @@
 				4815367E1F1EEFD900FD24A0 /* IVSHTTP.m in Headers */,
 				4815367C1F1EEDF200FD24A0 /* IVSHTTP.h in Headers */,
 				ADCED32C63167313240C4771B53BE277 /* IVSHTTP-umbrella.h in Headers */,
-				487B404E1F1F371B00F87C56 /* KeychainItemWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +363,6 @@
 			files = (
 				4815367D1F1EEDF200FD24A0 /* IVSHTTP.m in Sources */,
 				BEFD04ACB67B83A56D08A37B07E87103 /* IVSHTTP-dummy.m in Sources */,
-				487B404F1F1F371B00F87C56 /* KeychainItemWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

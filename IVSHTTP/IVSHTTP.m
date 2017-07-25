@@ -8,7 +8,6 @@
 
 #import "IVSHTTP.h"
 #import <WebKit/WebKit.h>
-#import "KeychainItemWrapper.h"
 
 
 @implementation IVSHTTP
@@ -226,67 +225,6 @@
 #pragma mark -
 #pragma mark - Util
 
-+ (NSString *)appName
-{
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
-}
-
-+ (NSString*)deviceModel
-{
-    return [[UIDevice currentDevice] model];
-}
-
-+ (NSString*)bundleId
-{
-    return [[NSBundle mainBundle] bundleIdentifier];
-}
-
-+ (float)iosVersion
-{
-    return [[[UIDevice currentDevice] systemVersion] floatValue];
-}
-
-+ (NSString *)appVersion
-{
-    return (NSString *)[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-}
-
-+ (NSString *)appBuildCount
-{
-    return (NSString *)[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
-}
-
-// Generate unique id of device for iPhone / iPad using Objective-c
-+ (NSString*)appUniqueId
-{
-    // initialize keychaing item for saving UUID.
-    KeychainItemWrapper *wrapper = [[KeychainItemWrapper alloc] initWithIdentifier:[IVSHTTP bundleId]
-                                                                       accessGroup:nil];
-    NSString *uuid = [wrapper objectForKey:(__bridge id)(kSecAttrAccount)];
-    if( uuid == nil || uuid.length == 0){
-        // if there is not UUID in keychain, make UUID and save it.
-        CFUUIDRef uuidRef = CFUUIDCreate(NULL);
-        CFStringRef uuidStringRef = CFUUIDCreateString(NULL, uuidRef);
-        CFRelease(uuidRef);
-        uuid = [NSString stringWithString:(__bridge NSString *)uuidStringRef];
-        CFRelease(uuidStringRef);
-        // save UUID in keychain
-        [wrapper setObject:uuid forKey:(__bridge id)(kSecAttrAccount)];
-    }
-    return uuid;
-}
-
-+ (NSString *)docDir
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    return [paths objectAtIndex:0];
-}
-
-+ (NSString *)docPath:(NSString *)fileName
-{
-    return [[IVSHTTP docDir] stringByAppendingPathComponent:fileName];
-}
-
 + (NSString *)generateBoundaryString
 {
     return [NSString stringWithFormat:@"Boundary-%@", [[NSUUID UUID] UUIDString]];
@@ -302,7 +240,7 @@
     return [tempVal description];
 }
 
-+ (NSURL*)makeURL:(NSString *)url parameters:(NSDictionary *)parameters
++ (NSURL *)makeURL:(NSString *)url parameters:(NSDictionary *)parameters
 {
     NSURLComponents *components = [NSURLComponents componentsWithString:url];
     NSMutableArray *queryItems = [NSMutableArray array];
@@ -324,31 +262,31 @@
     }
     return dict;
 }
-
-+ (id)data2Cont:(NSData *)data
-{
-    return [NSJSONSerialization JSONObjectWithData:data
-                                           options:NSJSONReadingMutableContainers
-                                             error:nil];
-}
-
-+ (NSData *)cont2Data:(id)container
-{
-    return [NSJSONSerialization dataWithJSONObject:container
-                                           options:0
-                                             error:nil];
-}
-
-+ (NSString *)data2Json:(NSData *)data
-{
-    return [[NSString alloc] initWithData:data
-                                 encoding:NSUTF8StringEncoding];
-}
-
-+ (NSData *)json2Data:(NSString *)json
-{
-    return [json dataUsingEncoding:NSUTF8StringEncoding];
-}
+//
+//+ (id)data2Cont:(NSData *)data
+//{
+//    return [NSJSONSerialization JSONObjectWithData:data
+//                                           options:NSJSONReadingMutableContainers
+//                                             error:nil];
+//}
+//
+//+ (NSData *)cont2Data:(id)container
+//{
+//    return [NSJSONSerialization dataWithJSONObject:container
+//                                           options:0
+//                                             error:nil];
+//}
+//
+//+ (NSString *)data2Json:(NSData *)data
+//{
+//    return [[NSString alloc] initWithData:data
+//                                 encoding:NSUTF8StringEncoding];
+//}
+//
+//+ (NSData *)json2Data:(NSString *)json
+//{
+//    return [json dataUsingEncoding:NSUTF8StringEncoding];
+//}
 
 + (void)removeWebChche
 {
@@ -518,17 +456,17 @@
     return [NSData dataWithContentsOfFile:path];
 }
 
-+ (NSString*)urlEncode:(NSString*)str
++ (NSString *)urlEncode:(NSString *)str
 {
     return [str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
-+ (NSString*)urlDecode:(NSString*)str
++ (NSString *)urlDecode:(NSString *)str
 {
     return [str stringByRemovingPercentEncoding];
 }
 
-+ (NSString*)utf8toNString:(NSString*)str
++ (NSString *)utf8toNString:(NSString *)str
 {
     NSString* strT= [str stringByReplacingOccurrencesOfString:@"\\U" withString:@"\\u"];
     CFStringRef transform = CFSTR("Any-Hex/Java");
