@@ -278,6 +278,24 @@
                                              error:nil];
 }
 
++ (NSData *)cont2Data:(id)container
+{
+    return [NSJSONSerialization dataWithJSONObject:container
+                                           options:0
+                                             error:nil];
+}
+
++ (NSString *)data2Json:(NSData *)data
+{
+    return [[NSString alloc] initWithData:data
+                                 encoding:NSUTF8StringEncoding];
+}
+
++ (NSData *)json2Data:(NSString *)json
+{
+    return [json dataUsingEncoding:NSUTF8StringEncoding];
+}
+
 + (void)removeWebChche
 {
     // WKWebView
