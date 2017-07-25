@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
 
 
   s.source_files = 'IVSHTTP/**/*.{h,m,mm,c,cpp}'
-  s.private_header_files = 'IVSHTTP/Private/*.h'
+  # s.private_header_files = 'IVSHTTP/Private/*.h'
 
   # s.resource_bundles = {
   #   'IVSHTTP' => ['IVSHTTP/Assets/*.png']
