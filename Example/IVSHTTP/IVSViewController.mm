@@ -8,8 +8,9 @@
 
 #import "IVSViewController.h"
 #import <IVSHTTP.h>
+#import <IVSMSG.hpp>
 
-// Missing submodule 'IVSHTTP.IVSHTTP
+
 @interface IVSViewController ()
 
 @end
@@ -20,6 +21,25 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    int  a = 1234;
+    long b = 12345;
+    char s[] = "hello world.";
+    NSString *s2 = @"hello world! hello world! hello world! hello world! end.";
+    
+    IVSMSG m;
+    m<<a<<b<<s<<s2;
+    
+    int  aa;
+    long bb;
+    char ss[128] = {0,};
+    NSString *ss2;
+    m>>aa>>bb>>ss>>ss2;
+
+    
+    NSLog(@"%d, %ld, %s, %@", aa,bb,ss,ss2);
+    NSLog(@"");
 }
 
 - (void)didReceiveMemoryWarning
